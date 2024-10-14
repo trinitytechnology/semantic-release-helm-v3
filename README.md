@@ -13,8 +13,7 @@
 | `verifyRelease`    | Verify the up comming release version.                    |
 | `prepare`          | Update `version` and/or `appVersion` in _Chart.yaml_.     |
 | `publish`          | Publish Helm chart to registry.                           |
-
-> **NOTE:** This repository is inspired by semantic-release-helm3. [semantic-release-helm3](https://github.com/nflaig/semantic-release-helm)
+> **NOTE:** This repository draws inspiration from [semantic-release-helm3](https://github.com/nflaig/semantic-release-helm).
 
 This plugin for _semantic-release_ updates the `version` and `appVersion` fields in a [Helm](https://helm.sh/) chart's _Chart.yaml_ file.
 
@@ -53,8 +52,6 @@ appVersion 1.1.0
 | `registry`          | `string`  | `""`    | `false`  | URI of a container registry.                                                                                                          |
 | `onlyUpdateVersion` | `boolean` | `false` | `false`  | Don't change `appVersion` if this is true. Useful if your chart is in a different git repo than the application.                      |
 | `useChartVersion`   | `boolean` | `false` | `false`  | Use Chart's version and appVersion rather than use Git Tag                                                                            |
-| `crPublish`         | `boolean` | `false` | `false`  | Enable chart-releaser publishing.                                                                                                     |
-| `crConfigPath`      | `string`  | `""`    | `false`  | Path to .ct.yaml chart-releaser configuration file.                                                                                   |
 | `isChartMuseum`     | `boolean` | `false` | `false`  | Enable ChartMuseum publishing.                                                                                                        |
 | `populateChangelog` | `boolean` | `false` | `false`  | Populate `artifacthub.io/changes` annotations with notes produced by `@semantic-release/release-notes-generator` compatible plugins.  |
 | `skipRegistryLogin` | `boolean` | `false` | `false`  | Skip the `helm registry login` command in the verifyConditions step.                                                                  |
