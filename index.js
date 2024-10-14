@@ -1,4 +1,6 @@
+/* eslint require-atomic-updates: off */
 import verify from "./lib/verify.js";
+
 let verified;
 
 /**
@@ -6,9 +8,9 @@ let verified;
  * @param {*} pluginConfig The semantic-release plugin config
  * @param {*} context The context provided by semantic-release
  */
-async function verifyConditions(pluginConfig, context) {
+export async function verifyConditions(pluginConfig, context) {
+  if (!verified) {
   await verify(pluginConfig, context);
   verified = true;
+  }
 }
-
-module.exports = { verifyConditions };
