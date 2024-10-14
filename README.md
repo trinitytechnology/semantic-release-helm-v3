@@ -10,6 +10,7 @@
 | Step               | Description                                               |
 | ------------------ | --------------------------------------------------------- |
 | `verifyConditions` | Verify required configuration and login to Helm registry. |
+| `verifyRelease`    | Verify the up comming release version.                    |
 | `prepare`          | Update `version` and/or `appVersion` in _Chart.yaml_.     |
 | `publish`          | Publish Helm chart to registry.                           |
 
@@ -51,6 +52,7 @@ appVersion 1.1.0
 | `chartPath`         | `string`  | `""`    | `true`   | Chart directory, where the _Chart.yaml_ is located.                                                                                   |
 | `registry`          | `string`  | `""`    | `false`  | URI of a container registry.                                                                                                          |
 | `onlyUpdateVersion` | `boolean` | `false` | `false`  | Don't change `appVersion` if this is true. Useful if your chart is in a different git repo than the application.                      |
+| `useChartVersion`   | `boolean` | `false` | `false`  | Use Chart's version and appVersion rather than use Git Tag                                                                            |
 | `crPublish`         | `boolean` | `false` | `false`  | Enable chart-releaser publishing.                                                                                                     |
 | `crConfigPath`      | `string`  | `""`    | `false`  | Path to .ct.yaml chart-releaser configuration file.                                                                                   |
 | `isChartMuseum`     | `boolean` | `false` | `false`  | Enable ChartMuseum publishing.                                                                                                        |

@@ -19,6 +19,7 @@
     "debug": "^4.0.0",
     "dir-glob": "^3.0.0",
     "escape-string-regexp": "^5.0.0",
+    "execa": "^5.0.0",
     "formdata-node": "^6.0.3",
     "fs-extra": "^11.0.0",
     "globby": "^14.0.0",
@@ -26,7 +27,7 @@
     "hpagent": "^1.0.0",
     "lodash-es": "^4.17.21",
     "parse-url": "^9.0.0",
-    "execa": "^5.0.0",
+    "semver": "^7.6.3",
     "url-join": "^4.0.0"
   },
   "devDependencies": {
