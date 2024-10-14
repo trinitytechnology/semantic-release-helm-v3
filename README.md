@@ -69,6 +69,12 @@ Set chart path
 export CHART_PATH=<dir>
 ```
 
+Set USE_CHART_VERSION if you want to get next version based on Chart.yml version and appVersion
+
+```sh
+export USE_CHART_VERSION=true
+```
+
 Pass credentials through environment variables accordingly:
 
 ```sh

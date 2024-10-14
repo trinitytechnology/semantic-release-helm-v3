@@ -2,6 +2,7 @@
 import verifyChart from "./lib/verify.js";
 import prepareChart from "./lib/prepare.js";
 import verifyReleaseChart from "./lib/verifyRelease.js";
+import publishChart from "./lib/publish.js";
 
 let verified;
 let prepared;
@@ -37,4 +38,19 @@ export async function prepare(pluginConfig, context) {
     await prepareChart(pluginConfig, context);
     prepared = true;
   }
+}
+
+/**
+ * Called by semantic-release during the publish step
+ * @param {*} pluginConfig The semantic-release plugin config
+ * @param {*} context The context provided by semantic-release
+ */
+export async function publish(pluginConfig, context) {
+  if (!verified) {
+    await verifyChart(pluginConfig, context);
+  }
+  if (!prepared) {
+    await prepareChart(pluginConfig, context);
+  }
+  await publishChart(pluginConfig, context);
 }
