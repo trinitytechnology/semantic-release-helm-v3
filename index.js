@@ -10,7 +10,7 @@ let verified;
  */
 export async function verifyConditions(pluginConfig, context) {
   if (!verified) {
-  await verify(pluginConfig, context);
-  verified = true;
+    await verify(pluginConfig, context);
+    verified = true;
   }
 }

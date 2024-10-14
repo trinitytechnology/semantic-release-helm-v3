@@ -25,10 +25,11 @@ Updating the `appVersion` is optional and can be disabled by setting `onlyUpdate
 ```bash
 npm install semantic-release-helm-v3 -D
 ```
+
 ##### Examples:
 
 ```txt
-version 0.1.0  
+version 0.1.0
 appVersion 1.1.0
 ```
 
