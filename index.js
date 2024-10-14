@@ -1,10 +1,14 @@
+import verify from "./lib/verify.js";
+let verified;
 
-module.exports = {
-  /**
-   * Verify if the plugin can run.
-   */
-  verifyConditions: async (config, context) => {
-    const { logger } = context;
-    logger.log('Verifying release conditions...');
-  },
-};
+/**
+ * Called by semantic-release during the verification step
+ * @param {*} pluginConfig The semantic-release plugin config
+ * @param {*} context The context provided by semantic-release
+ */
+async function verifyConditions(pluginConfig, context) {
+  await verify(pluginConfig, context);
+  verified = true;
+}
+
+module.exports = { verifyConditions };
