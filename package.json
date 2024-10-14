@@ -1,0 +1,28 @@
+{
+  "name": "semantic-release-helm-v3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "lib/**/*.js"
+  ],
+  "scripts": {
+    "test": "jest",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "mock-fs": "^5.2.0"
+  },
+  "dependencies": {
+    "aggregate-error": "^5.0.0",
+    "execa": "^9.4.0",
+    "path": "^0.12.7",
+    "semver": "^7.6.3",
+    "yaml": "^2.6.0"
+  }
+}
